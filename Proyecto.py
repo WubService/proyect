@@ -7,21 +7,12 @@ def send_data():
     edad_info = str(edad.get())
     cedula_info = str(cedula.get())
 
-    print(nombres_info,"\t", apellidos_info,"\t", cedula_info, "\t", profesion_info, "\t", edad_info)
+    print(nombres_info+"\t"+apellidos_info+"\t"+cedula_info+ "\t"+profesion_info+"\t"+edad_info)
 
 #   Guardar información en un documento
 
-    documento = open("registro.txt", "a") 
-    documento.write(nombres_info)
-    documento.write("\t")
-    documento.write(apellidos_info)
-    documento.write("\t")
-    documento.write(cedula_info)
-    documento.write("\t")
-    documento.write(profesion_info)
-    documento.write("\t")
-    documento.write(edad_info)
-    documento.write("\n")
+    documento = open("registro.txt", "a")
+    documento.write(nombres_info+"\t"+apellidos_info+"\t"+cedula_info+"\t"+profesion_info+"\t"+edad_info+"\n")
     documento.close()
 
     print("Usuario nuevo carnetizado. Nombres: {} | Apellidos: {} | C.I. {} ) ".format (nombres_info, apellidos_info, cedula_info))
